@@ -1,18 +1,40 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    demo
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+<script setup>
+import { useRouter, useRoute } from 'vue-router';
+import { useStore } from 'vuex';
+import { ref, reactive, computed, defineProps, defineEmits, defineExpose } from 'vue';
 
-export default defineComponent({
-  name: 'HomeView',
-  components: {
-    HelloWorld,
-  },
+// 引入路由
+const router = useRouter();
+// 路由对象
+const route = useRoute();
+// 引入仓库
+const store = useStore();
+  
+// 声明响应式数据
+const data = reactive({
+
 });
+
+// 父传子
+const props = defineProps({
+
+});
+
+// 子传父
+const emit = defineEmits({
+
+});
+
 </script>
+
+<style lang="scss" scoped>
+  .home {
+
+  }
+</style>
